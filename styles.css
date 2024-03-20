@@ -1,0 +1,280 @@
+:root{
+    --NavbarColor:#39A0ED;
+    --LinkColor:white;
+    --backgroundLink:#32322c;
+    --main-colorSec1:#4c6085;
+    --main-green:#36F1CD;
+    --main-colorSec2:linear-gradient(to right top, #1d84aa, #317ba3, #3d729a, #466990, #4c6085);;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Palanquin Dark", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    background-color: var(--NavbarColor);
+    overflow: hidden;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+    position: sticky;
+}
+
+
+ul.centenido-info{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+#navbar ul li >a{
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 1.5rem;
+}
+
+a#nav-link:hover{
+    cursor: pointer;
+    background-color:var(--backgroundLink) ;
+}
+
+a{
+    text-decoration: none;
+    color: var(--LinkColor);
+}
+
+li{
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+/*Primera seccion*/
+
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    background: rgb(122,138,170);
+    background: linear-gradient(70deg, rgba(122,138,170,1) 0%, rgba(76,96,133,1) 39%, rgba(72,92,129,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome-section h1{
+    font-size: 6rem;
+    font-weight: 500;
+    color: var(--LinkColor);
+    text-align: center;
+}
+
+#welcome-section p{
+    font-size: 3rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-green);
+}
+
+/*Segunda seccion*/
+
+.projects-section{
+    text-align: center;
+    padding: 4rem 8rem;
+    background-image: var(--main-colorSec2);
+    
+}
+
+.project-section-header{
+    font-size: 2.5rem;
+    border-bottom: 1px solid;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--LinkColor);
+    color: var(--LinkColor);
+    font-weight: 500;
+}
+
+
+.grid-projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project {
+    background: var(--main-colorSec1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.project-image {
+    height: calc(100% - 4.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title{
+    font-size:  1.3rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+}
+
+.btn-ver-mas{
+    font-size: 1rem;
+    background: var(--backgroundLink);
+}
+
+
+.btn-ver-mas:hover{
+    color: #36F1CD;
+    cursor: pointer;
+    transition:scale(2) ;
+}
+
+/*Tercera Seccion*/
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: linear-gradient(280deg, rgba(122,138,170,1) 0%, rgba(76,96,133,1) 39%, rgba(72,92,129,1) 100%);
+
+}   
+
+.contact-section-header h2{
+    font-size: 3.5rem;
+    font-weight: 400;
+    color:var(--LinkColor);
+    text-align: center;
+}
+.contact-section-header p{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color:var(--LinkColor);
+    text-align: center;
+    font-style: italic;
+}
+
+.contact-details {
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+
+
+/*FOOTER*/
+
+
+footer{
+    width: 100%;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(280deg, rgba(122,138,170,1) 0%, rgba(76,96,133,1) 39%, rgba(72,92,129,1) 100%);
+    border-top: 4px solid var(--main-green);
+    color: var(--LinkColor);
+}
+
+footer p{
+    font-size: 1.2rem;
+}
+
+/*Media querys*/
+
+@media screen and (max-width: 670px) {
+    html{
+        font-size: 80%;
+    }
+    .grid-projects{
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .grid-projects{
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+    html{
+        font-size: 60%;
+    }
+    .contact-section {
+        padding: 0;
+    }
+
+    .projects-section{
+        padding: 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid-projects{
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
+    html{
+        font-size: 60%;
+       
+    }
+    .contact-section {
+        padding: 0;
+    }
+
+    .projects-section{
+        padding: 4rem 4rem;
+    }
+}
