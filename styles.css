@@ -1,0 +1,71 @@
+:root{
+    --NavbarColor:#4C6085;
+    --LinkColor:white;
+    --backgroundLink:#36F1CD;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Palanquin Dark", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    width: 100%;
+    height: 100%;
+    background-color: var(--NavbarColor);
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+   
+}
+
+
+ul.centenido-info{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+#navbar ul li >a{
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 1.5rem;
+}
+
+a#nav-link:hover{
+    cursor: pointer;
+    background-color:var(--backgroundLink) ;
+}
+
+a{
+    text-decoration: none;
+    color: var(--LinkColor);
+}
+
+li{
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+/*Primera seccion*/
